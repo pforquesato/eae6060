@@ -1,0 +1,746 @@
+---
+title: "EAE-6060: Public Finance I"
+author: "Pedro Forquesato<br/>http://www.pedroforquesato.com<br/>Sala 217/FEA2 - pforquesato@usp.br"
+institute: "Departamento de Economia<br/>Universidade de São Paulo"
+date: "2022/3 - Topic 4: Optimal labor taxation"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      
+---
+class: inverse, middle, center
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+library(RefManageR)
+BibOptions(check.entries = FALSE,
+           bib.style = "alphabetic",
+           cite.style = "alphabetic",
+           style = "markdown",
+           hyperlink = FALSE,
+           dashed = FALSE)
+myBib <- ReadBib("./eae6060_bib.bib", check = FALSE)
+```
+
+# Optimal labor income taxation
+
+---
+class: middle
+## Efficiency vs equity
+
+Edgeworth in the 19th century had already realized that without **behavioral effects**, optimal utilitarian labor taxation implies complete equalization of marginal utility: same income for everyone
+
+Unfortunately, behavioral effects are unavoidable, and they generate a **trade-off between efficiency and equity** &mdash; as Mirrlees (1971) states: 
+
+> *As a result of using men’s economic performance as evidence of their economic potentialities*, complete equality of social marginal utilities of income ceases to be desirable, for the tax system that would bring about this result would completely discourage all unpleasant work.
+
+---
+class: middle
+## Mirrlees problem
+
+If $H(z)$ is the cdf of pre-tax income $z$, and $c = z - T(z)$, then government maximizes socially-weighted income $G\circ u$ given a minimum revenue of $E(p)$ $$\text{SWF} = \int_0^{\infty} G\left( u \left( z - T(z) \right)\right) \text{d}H(z) \text{ s. t.} \int_0^{\infty} T(z)\text{d}H(z) \geq E(p)$$
+
+If income $z$ is fixed, then point-wise maximization leads to $u^{\prime} \left( z - T(z) \right) = p$ &mdash; namely, egalitarianism (Edgeworth); unfortunately, in the real world $z$ is a choice variable: if we tax income at a 100% rate, then no one will work
+
+---
+class: middle
+## Maximum revenue with linear taxation
+
+Let $Z(1 - \tau)$ be the taxable income function when subject to a linear tax $\tau$
+
+Then government revenue is given by $R(\tau) = \tau Z(1 - \tau)$, with maximum (**top of the Laffer curve**) satisfying the following *first order conditions*: $$\text{[FOC]: }Z(1 - \tau) - \tau Z^{\prime}(1 - \tau) = 0$$
+
+$$\Rightarrow \frac{Z(1 - \tau)}{1 - \tau} = \frac{\tau}{1 - \tau} Z^{\prime}(1 - \tau)$$
+$$\therefore \frac{\tau^*}{1 - \tau^*} = \frac{1}{e} \Rightarrow  \tau^* = \frac{1}{1 + e}$$
+
+---
+class: middle
+## Optimal linear taxation
+
+Consider now the (more important) problem of designing a linear income tax to maximize social welfare, where we again apply the **envelope theorem**: $$\int_i \omega^i G\left( u^i \left( (1-\tau)z^i + \tau Z(1-\tau) - E, z^i \right)\right) \text{d} \nu (i)$$
+
+$$ \text{[FOC]: } \int_i \omega^i G^{\prime}(u^i) u^i_c \left[ Z - z^i - \tau \frac{\text{d}Z}{\text{d}(1-\tau)} \right] \text{d} \nu(i) = 0$$
+
+If $g^i \equiv \omega^i G^{\prime}(u^i) u^i_c / \int_j \omega^j G^{\prime}(u^j) u^j_c \text{d} \nu (j)$ is the **normalized marginal social welfare weight** of individual $i$,
+$$Z \cdot \left[1 - \frac{\tau}{1 - \tau} \left( \frac{\text{d}Z}{\text{d}(1-\tau)} \frac{1-\tau}{Z}\right) \right] = \int_i g^i z^i  \text{d} \nu(i)$$
+
+---
+class: middle
+## Optimal linear taxation
+
+$$\therefore \tau^* = \frac{1 - \bar{g}}{1 - \bar{g} + e} \text{, onde } \bar{g} = \int_i \frac{g^i z^i}{Z}\text{d} \nu(i)$$
+
+where $1 - \bar{g} = - \text{corr}(g^i, z^i / Z)$ is the correlation between social welfare weights and taxable income, and it represents social redistributive preferences &mdash; if $\bar{g} = 1$, so there are no redistributive motives, then $\tau^* = 0$ is optimal; if $\bar{g} = 0$ (Rawls), then the solution is the maximum revenue
+
+Optimal tax is also decreasing in (Marshallian) **taxable income elasticity** $e$, which includes income effects and compensated elasticity
+
+---
+class: middle
+## Optimal taxation at the top
+
+Consider a maximum (marginal) tax rate $\tau$ charged over incomes above $z^*$, which contain fraction $q$ of individuals
+
+Imagine now an infinitesimal change in the tax rate $d\tau$: it has 2 effects, individuals $i$ above $z^*$ pay an additional $(z^i - z^*)d\tau$ (**mechanical effect**), with this amount of revenue and a social cost of $g^i (z^i - z^*)d\tau$
+
+But there is also a **behavioral effect** $\tau dz^i$ &mdash; since: $$e^i = \frac{dz^i}{d(1 - \tau)} \frac{1 - \tau}{z^i} \Rightarrow dz^i = - e^i \frac{z^i}{1-\tau} d\tau$$
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics("figs/aula-4-grafico-27.png")
+```
+
+A rise in marginal tax after $z^*$ has two effects on revenue: individuals are *mechanically* paying more taxes for a fixed taxable income (positive), but for a given tax level they *behaviorally* reduce their income (negative) &mdash; at the optimum, these effects must be equal `r Citep(myBib, "piketty2013optimal")`
+ 
+---
+class: middle
+## Optimal taxation at the top
+
+Note that while a mechanical increase in revenue has mixed effect on welfare, the behavioral effect only changes social welfare by the **fiscal externality** (because of *envelope theorem*) &mdash; therefore, if $g$ is the social weight of people earning more than $z^*$:
+
+$$\text{[FOC]: } d\text{SWF} = \left[ (1 - g) (z - z^*) - e z \frac{\tau}{1 - \tau} \right] q d\tau =  0$$
+Calling $a \equiv z / (z - z^*)$ (which is approximately the parameter of a Pareto distribution), the optimal tax rate at the top is given by $$\tau^* = \frac{1 - g}{1 - g + a\cdot e}$$
+
+
+---
+class: middle
+## Optimal taxation at the top
+
+If $g = 0$, then the optimal top rate is $\tau^{*} = 1 / (1 + a \cdot e)$, the top of the Laffer curve &mdash; and note that if agents have *decreasing marginal utility*, this implies that $g \rightarrow 0$
+
+Furthermore, if $z^* = 0$, then $a = 1$ and we get the linear revenue-maximizing rate, as before &mdash; for nonlinear taxation, $a \geq 1$ measures how thick is the tail of the distribution (for US, it is estimated at about $1.5$)
+
+On the very top, if the distribution of income is finite, then $z=z^*$ implies $a \rightarrow \infty$, so $\tau^* = 0$ &mdash; this is the famous result of *zero marginal taxation at the top*
+
+---
+class: inverse, middle, center
+
+# Chetty, R. (2009). “Is the taxable income elasticity sufficient to calculate deadweight loss? The implications of evasion and avoidance”
+
+---
+class: middle
+## Taxable income elasticity
+
+We just saw that the *sufficient elasticity* for optimal labor taxation is the elasticity of income &mdash; in the past, this was thought of as the elasticity of labor supply
+
+But elasticities of labor supply empirically are very small, around 0.1 `r Citep(myBib, "keane2011labor")`, which generate very high optimal tax rates &mdash; in that case, the top of Laffer curve is at $91\%$
+
+This "counterintuitive" result generated a lot of discussion, and the main retort came through a pair of extremely influential papers from Martin Feldstein in 1995 and 1999
+
+---
+class: middle
+## Taxable income elasticity
+
+In these papers, Feldstein argued that labor elasticity captured only one form of behavioral response to taxation (work hours), while ignoring other potentially even more important ones: effort, education, career choice, etc.
+
+To account for these other mechanisms he studied the **taxable income elasticity**: any other behavioral response that matters must lead to a decrease in taxable income, so we can consider only this one sufficient statistic
+
+With this new methodology, Feldstein found gigantic efficiency costs of taxation: he estimated a TI elasticity higher than 1 (it is not), leading to most countries being on the *wrong side* of the Laffer curve
+
+---
+class: middle
+## Taxable income elasticity
+
+This approach became dominant, because it has two big advantages: (1) it is practical, as researchers need "only" tax data; (ii) it is elegant, since it needs not care about many possible channels of deadweight loss
+
+The problem is that one way of reducing taxable income is **tax evasion** &mdash; and intuitively, we should not consider evasion a cost when considering the optimal tax rate
+
+Feldstein's contribution was to argue the opposite: an optimizing agent equals the marginal benefit of evasion (tax rate) with the marginal cost of evasion, so evasion generates real economic costs that must be taken into account
+
+---
+class: middle
+## Feldstein (1999) model without evasion
+
+Consider a canonical labor supply model, with a linear labor tax generating revenue $R(t) = twl$ 
+
+$$\max_{l} u(c, l) = c - \psi (l) \text{, s.t. } c = y + (1 - t) wl$$
+We want to calculate the welfare impact of taxation when the government revenue is returned to the individual, namely $$W(t) = \left\{ y + (1 - t)wl - \psi (l) \right\} + twl$$
+
+The **envelope theorem** implies that  $du / dt = \partial u / \partial t = -wl$
+
+---
+class: middle
+## Feldstein (1999) model without evasion
+
+Therefore: $$\frac{d W}{dt} = \frac{du}{dt} + \frac{dR}{dt} = \frac{\partial u}{\partial t} + \frac{dR}{dt}$$
+
+$$= -wl + wl + t \frac{d(wl)}{dt} = t \frac{d \text{TI}}{dt},$$
+where the **taxable income** TI is a sufficient statistic! (Note that we are only considering welfare losses here, so optimal tax is zero)
+
+---
+class: middle
+## Feldstein (1999) model with evasion
+
+Now imagine that the agent can evade an amount $e$ paying a cost $g(e)$ &mdash; now the agent solves in $l$ and $e$: $$\max_{l,e} u(c, l) = c - \psi (l) - g(e) \text{ s.t. } c = y + (1 - t) (wl - e) + e$$
+
+Social welfare is now given by: $$W(t) = \left\{ y + (1 - t)(wl - e) + e - \psi (l) - g(e) \right\} + t(wl - e)$$
+
+$$\text{But again }\frac{d W}{dt} = - \left( wl - e \right) + \left( wl - e \right) + t \frac{d (wl - e)}{dt} = t \frac{d\text{TI}}{dt}$$
+
+---
+class: middle
+## Feldstein (1999) model with evasion
+
+This was Feldstein's insight: it does not matter for deadweight loss if reductions in taxable income come from reduced labor supply or higher evasion
+
+Application of **envelope theorem**: at the optimum, agents equalize the *marginal cost of evasion* one dollar, $g^{\prime}(e)$, with the marginal benefit $t$
+
+Therefore the welfare cost of evasion, at the margin, is the same as the *marginal value of labor*, which at the optimum is also $t$, since agents work until the disutility of an extra dollar is $1-t$
+
+---
+class: middle
+## Evasion as transfers
+
+Chetty's contribution is noting that the above logic is only valid if *evasion is an economic cost*: a large part of it, though, is just transfers to third-parties (notably government fines)
+
+Note here that payments for lawyers and accountants do not work: in a competitive market, a lawyer's wage will equal their marginal cost of effort, which is a social cost 
+
+Imagine then that the government can audit tax payers, imposing an expected evasion cost of $z(e, t) = p(e) \left[ te + F(e,t) \right]$, where $p(e)$ is the audit probability and $F(e,t)$ the fine &mdash; the agent's problem becomes: 
+
+
+---
+class: middle
+## Evasion as transfers
+
+$$\max_{l,e} u(c, l) = c - \psi (l), \text{ s.t. } c = y + (1 - t) (wl - e) + e - z(e,t)$$
+$$\Rightarrow W(t) = \left\{ y + (1 - t)(wl - e) + e - \psi (l) - z(e,t) \right\} + t(wl - e) + z(e,t)$$
+
+
+
+But now the sufficient statistic is not taxable income (elasticity) anymore, but **labor income**: $$\frac{d W}{dt} = - \left( wl - e \right) - \frac{\partial z}{\partial t} + \left( wl - e \right) + \frac{\partial z}{\partial t} + t \frac{d (wl - e)}{dt} + \frac{\partial z}{\partial e} \frac{d e}{d t}$$
+
+$$= t \frac{d\text{TI}}{dt} + \frac{\partial z}{\partial e} \frac{d e}{d t} =  t \frac{d\text{LI}}{dt} + \frac{d e}{d t} \left(\frac{\partial z}{\partial e} - t \right) = t \frac{d\text{LI}}{dt} \text{!}$$
+
+---
+class: middle
+## General case
+
+The general model is simply a combination of case 2 (with $g^{\prime}(e)$) and 3 (with $z(e,t)$) &mdash; the derivation is exactly as in the previous slide, reaching: $$\frac{d W}{dt} = t \frac{d\text{LI}}{dt} + \frac{d e}{d t} \left(\frac{\partial z}{\partial e} - t \right)$$
+
+This time however, the FOC for evasion is different: $t = z^{\prime}(e) + g^{\prime}(e)$, which leads to a different (general) formula for deadweight-loss: $$\frac{d W}{dt} = t \frac{d\text{LI}}{dt} - g^{\prime}(e)\frac{de}{dt}$$
+
+
+---
+class: middle
+## General case
+
+If we call $\mu \equiv g^{\prime}(e)/(g^{\prime}(e) + z^{\prime}(e)) = g^{\prime}(e)/t$ the share of evasion cost that is an **economic cost**, we get:
+
+$$\frac{d W}{dt} = t \left\{ (1 - \mu + \mu) \frac{d(wl)}{dt} - \mu\frac{de}{dt} \right\} = t \left\{ \mu \frac{d\text{TI}}{dt} + (1 - \mu) \frac{d\text{LI}}{dt} \right\}$$
+
+
+$$= - \frac{t}{1 - t} \left\{ \mu \text{TI} \epsilon_{\text{TI}} + (1 - \mu) wl \epsilon_{\text{LI}} \right\}$$
+
+Where $\epsilon_{\text{TI}}$ (or $\epsilon_{\text{LI}}$) is the (absolute value) elasticity of taxable income (resp. labor income) to the *net-of-tax rate* $1 -t$
+
+
+---
+class: middle
+## Optimal taxation
+
+Assume that government revenue generates a benefit $(1 + \lambda)$ (otherwise $t^* = 0$) &mdash; then at the optimum the following FOC must hold: $$\frac{d \tilde{W}}{dt} = - \frac{t}{1 - t} \left\{ \mu \text{TI} \epsilon_{TI} + (1 - \mu) wl \epsilon_{LI} \right\} + \lambda \text{TI} \left( 1 - \frac{1}{1-t} \epsilon_{TI} \right) = 0$$
+
+$$\Rightarrow \frac{t^*}{1 - t^*} = \frac{\lambda}{ (\mu + \lambda) \epsilon_{TI} + (1 - \mu) \left(wl/(wl-e) \epsilon_{LI}\right)}$$
+
+Equally, the optimal taxation equalizes the **marginal benefit of public funds** $\lambda$ with the marginal cost of public funds, which is the welfare cost per unit of revenue $R$: $\text{MCPF} \equiv (dW/dt)/(dR/dt)$
+
+
+---
+class: middle
+## Taxable income elasticity
+
+Feldstein's argument of taxable income elasticity being a **sufficient statistic** requires that the *social* marginal cost of evasion equals the marginal benefit, but rational choice only ensures this for *private* marginal cost
+
+Besides optimization errors, these two will differ when part of the costs are transfers to other agents: notedly, audit fines &mdash; then, we also need to estimate the **labor** income elasticity for optimal taxation
+
+In fact, if evasion is purely transfers, then there is no deadweight loss, and we should account only for labor income elasticity &mdash; in practice, it will be something in between, namely, $\mu \in (0,1)$
+
+
+---
+class: inverse, middle, center
+
+# Piketty, T., Saez, E., and S. Stantcheva (2014). “Optimal taxation of top labor incomes: a tale of three elasticities” 
+
+---
+class: middle
+## Three elasticities
+
+The authors propose three possible relations between top tax rate and income share of the top 1%: (i) a real effect of lower economic activity, (ii) higher tax evasion; and (iii) less **rent seeking** by the rich
+
+Motives (i) and (ii) were already discussed in the previous paper; here they try to argue empirically that (iii) is relevant, and they calibrate *sufficient statistics* formulas with it
+
+To do this they analyze how share of the top 1% and GDP correlate with maximum tax-rates on the time-series and across countries, as well as how top rates affect CEO rent-seeking behavior
+
+---
+class: middle
+## Optimal top rate
+
+By a process very similar to what we have seen, they arrive at this "3 elasticities formula" for optimal top tax rate, where $e = (y/z)e_1 + e_2 + e_3$ is the **elasticity of taxable income** and $t$ (comp. to $\tau$) the tax rate for evaded income:
+
+$$\tau^{*} = \frac{1 + t \cdot a \cdot e_2 + a \cdot e_3}{1 + a \cdot e}$$
+
+Here:
+
+1. $e_1$ measures real economic effects of taxation (decreased labor supply, effort, etc); 
+2. $e_2$ is the elasticity of evasion, which can be lessened by a broad tax base; 
+3. $e_3$ is the elasticity of rent-seeking, which actually *increases* optimal tax
+
+
+---
+class: middle
+## "Macro" evidence
+
+Looking at the time-series for USA, there is a large negative correlation between tax rates at the top and top 1% income, which denotes a large *overall* elasticity of taxable income: $e \approx 0.5$
+
+Also, using more broad measures of income does not give very different estimates, so tax evasion elasticity cannot be too large
+
+Finally, there is no negative correlation (if anything, a positive one) between tax rates at the top and *average* income, so real effects of taxation must be small &mdash; if $e$ is big, but $e_1$ and $e_2$ are small, then $e_3$ must be sizable
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '80%', fig.align='center'}
+knitr::include_graphics("figs/aula-4-grafico-3.png")
+```
+
+After the war, top MTR were large and top 1% share small, while after the 80s top MTR declined significantly and *exactly at the same time* top 1% share started to rise rapidly &mdash; these are only correlations, but the timing is very coincident
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '80%', fig.align='center'}
+knitr::include_graphics("figs/aula-4-grafico-4.png")
+```
+
+The same is valid if we look at top 1% income instead of income share &mdash; but if we look at "bottom" 99% income, we see the opposite: it grew when top MTR were high and stopped increasing after *Reagonomics* 
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '90%'}
+knitr::include_graphics("figs/aula-4-grafico-5.png")
+```
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics("figs/aula-4-grafico-7.png")
+```
+
+They also look at the cross-country panel of growth of top 1% income share and changes in top MTR, finding strikingly similar results
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '90%'}
+knitr::include_graphics("figs/aula-4-grafico-6.png")
+```
+
+---
+class: middle
+## "Micro" evidence
+
+The above analysis is suggestive, but entirely correlational: *correlation is not causation* &mdash; the authors try to strengthen their argument by giving some "microfoundational" evidence on the importance of **rent-seeking**
+
+`r Citep(myBib, "bertrand2001ceos")` show that CEOs frequently earn higher payments for reasons entirely outside of their control ("luck") &mdash; this would imply that their remuneration does not only reflect high produtivity, but also *bargaining for rents*
+
+Here they contribute by finding that this *luck remuneration* is stronger when top marginal tax rates are lower &mdash; when CEOs pay lower taxes, it is worth more for them to pay costs to extract rents from the firm
+
+---
+class: middle
+## Remunerating for luck
+
+In an efficient contract, observable components that are independent from CEO effort ("luck") should never affect their remuneration &mdash; we can check this hypothesis in two stages
+
+First, we estimate the effect of firm performance on CEO remuneration: $$\log (\text{pay}_{it}) = \beta p_{it} + \gamma_i + \chi_t + \mathbf{X}_{it} \alpha + \epsilon_{it}$$
+
+This OLS regression identifies the **total derivative** of firm performance $p_{it}$ on CEO payments &mdash; we then run an IV regression using as instrument the average performance of *other*  firms in the same industry, $p_{\text{luck},it}$, which is (assumedly) orthogonal to CEO effort
+
+
+---
+class: middle
+## Remunerating for luck
+
+If $\beta_{IV} > 0$, then CEOs are getting payed for luck &mdash; further, if $\beta_{IV} \geq \beta_{OLS}$, then luck is rewarded *at least as much* as effort
+
+Here the exercise is to test whether $\beta_{IV}$ *relative to* $\beta_{OLS}$ is higher when there is more surplus to be bargained: when top marginal tax rates are lower 
+
+So they divide the USA time-series in a period with high (1970-1986) and low marginal tax rates at the top (1987-2010), and run this exercise in each &mdash; they also examine internationally whether lower tax rates are related to higher CEO salaries
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '90%'}
+knitr::include_graphics("figs/aula-4-grafico-9.png")
+```
+
+In the high tax period, $\beta_{OLS}$ is relatively low and larger than $\beta_{IV}$, while in the low tax period a 1% increase in stock-market value increases remuneration by 0.37% in general and much larger 0.95% if by luck!
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-4-grafico-10.png")
+```
+
+The elasticity of (pre-tax) CEO pay and *net-of-tax rate* at the top is $1.9$ (very large!) &mdash; interestingly, this relation is larger in firms with worse governance score, where arguably CEOs can engange more successfully in **rent-seeking behavior**
+
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-4-grafico-11.png")
+```
+
+We can use this to try to *calibrate* an optimal labor tax formula for marginal taxation at the top: if all the reduction in taxable income comes from real effects, the optimal top MTR is (already high) 57%, but if we believe that real effects are small and rent-seeking is important, it can be as high as 83%
+
+---
+class: inverse, middle, center
+
+# Akcigit, U., Baslandze, S., and S. Stantcheva (2016). “Taxation and the international mobility of inventors”
+
+
+---
+class: middle
+## Taxation and mobility
+
+One potential impact of taxation that is usually not well covered by taxable income elasticity estimates is tax-payer mobility: many workers respond to higher taxes not by working less, but moving to another location altogether
+
+This can be very harmful to economic activity and long-term growth, especially since the most affected by top marginal tax rates is (presumably) the most productive workers
+
+This paper examines a exemplary case: superstar inventors, those with top 1% in patent citations
+
+---
+class: middle
+## Taxation and mobility
+
+Researching international mobility has some big difficulties: (i) it requires an international panel of people locations, (ii) mobility decisions depend on *counterfactual* incomes that people expect to receive elsewhere; and (iii) country taxes are endogeneous
+
+Here they solve these issues by using international data on patent fillings, constructing counterfactual incomes based on inventor characteristics and using quasi-experimental evidence on international mobility
+
+
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '90%'}
+knitr::include_graphics("figs/aula-4-grafico-12.png")
+```
+
+This paper investigates behavior of the top 1% in number of citation-weighted patents, extremely prolific and highly payed inventors 
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '70%', fig.align='center'}
+knitr::include_graphics("figs/aula-4-grafico-13.png")
+```
+
+Plan is to compare the top 1% of inventors (**treatment group**), high income inventors whose mean tax rate is very close to the top MTR, with top 5%/10%/25% investors (**control group**), which should be similar in most characteristics (at least trends), but are less afected by changes in top MTR
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-4-grafico-14.png")
+```
+
+Consistently with that, top inventors respond positively to top retention (or net-of-tax) rate, while low quality inventors have no reaction &mdash; however, for domestic inventors, the elasticity is small
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-4-grafico-15.png")
+```
+
+However, for foreigners, the mobility elasticity w.r.t. retention rate is very considerable
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-4-grafico-16.png")
+```
+
+They also use as a *quasi-experiment* the collapse of Soviet Union, which made it easier for Russian scientists to migrate: before the collapse, the elasticity of mobility to retention rate at the top was similar (and small) for all scientists; after the collapse, it increased sharply for high quality scientists, but not for low quality ones
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-4-grafico-17.png")
+```
+
+Another exercise is a **synthetic control** method investigating the decline in top MTR with the 1986 tax reform: for foreign top 1% of investors the elasticity is enormous, but for top 10-25% it is not distinguishable from zero
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '80%', fig.align='center'}
+knitr::include_graphics("figs/aula-4-grafico-18.png")
+```
+
+Finally, they look at the effects of the 1992 Danish tax reform, and find a 0.72 elasticity for foreign inventors
+
+---
+class: middle
+## Location choice model
+
+$$U^{i}_{ct} = u \left( (1 - \tau_{ch^{i}t}) w^i_{ct} \right) + \mu_{ct}^i$$
+$$\Rightarrow U_{cti} = \alpha_{r_{it}} \log \left( 1 - \text{top MTR}^i_{ct} \right) + \alpha \log ( w_{cti} ) + \beta_c \mathbf{x_{ti}} + \zeta \mathbf{x_{ct}} + \eta \mathbf{x_{cti}} + \nu_{cti}$$
+
+If the error term $\nu_{cti}$ follows a Extreme Type I distribution, this structural model can *be estimated as* a multinomial logit
+
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '90%'}
+knitr::include_graphics("figs/aula-4-grafico-19.png")
+```
+
+This multinomial logit model gives estimated elasticities very close to the quasi-experimental techniques: almost zero for natives (0.03), but considerable for foreigners (~0.8) &mdash; luckily very similar across specifications
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '80%', fig.align='center'}
+knitr::include_graphics("figs/aula-4-grafico-20.png")
+```
+
+They also estimate a *differences-in-differences* style model comparing treated and control groups when top MTR changes, reaching similar results
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '80%', fig.align='center'}
+knitr::include_graphics("figs/aula-4-grafico-21.png")
+```
+
+A (hypothetical) 10 p.p. decrease in top MTR would have small effect on the number of domestic inventors (0.1% in USA), but a sizable effect on foreign ones (18% increase in USA, even larger in other countries)
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '80%', fig.align='center'}
+knitr::include_graphics("figs/aula-4-grafico-22.png")
+```
+
+Making "heroic assumptions" about patent value and productivity, they calculate yearly economic gains from a 5p.p. and 10p.p. decrease in top MTR
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '90%'}
+knitr::include_graphics("figs/aula-4-grafico-23.png")
+```
+
+Finally, they estimate a **Heckman selection model** using as instrumental variable a 1994 reform in USA and comparing location decisions between USA and Canada, and compare to a Probit model, finding almost identical results
+
+---
+class: inverse, middle, center
+
+# Chetty, R., Friedman, J. N., Olsen, T., and L. Pistaferri (2011). “Adjustment costs, firm responses, and micro vs. macro labor supply elasticities: Evidence from Danish tax records” 
+
+---
+class: middle
+## Bunching
+
+Bunching: literatura que tenta estimar elasticidade da renda tributável olhando como contribuintes se agrupam em quinas (*kinks*) na curva de imposto marginal
+
+O grande insight é que sob comportamento racional, a quantidade de contribuintes se agrupando na quina informa sobre a taxa marginal de substituição entre consumo e lazer
+
+Heuristicamente, se a taxa marginal sobe de $60\%$ para $80\%$, vão se agrupar todos (e apenas eles) cujo o custo (em termos de menor lazer) de trabalhar `$`1 extra é maior que $0.6$ mas menor que $0.8$
+
+---
+class: middle
+## Contribuição
+
+O insight do bunching gerou uma longa literatura, mas tem problemas: ele é drasticamente dependente de comportamento bastante racional e mercado sem fricções
+
+No mundo real é muito mais difícil controlar a renda tributável, especialmente para trabalhadores, o que limita as possibilidades de bunching
+
+Além disso, o custo de bem-estar de não fazer bunching é pequeno (de 2a ordem), e há evidências que pessoas fazem bunching só no maior dos *kinks* (Mortenson `&` Whitten, 2020)
+
+---
+class: middle
+## Contribuição (II)
+
+Esse artigo analisa o papel das fricções no mercado de trabalho para constranger o bunching
+
+Usa dados da Dinamarca, e mostra que horas são definidas coletivamente em geral, mas há uma tendência das negociações coletivas fazerem um "bunching agregado"
+
+Também argumenta que com custos de ajustamento (realista!), alterações maiores nos impostos geram elasticidades estimadas maiores nos dados
+
+Discute o efeito dessas fricções em gerar diferenças em elasticidade "macro" (razoavelmente altas e iguais à estrutural) e elasticidades "micro" (perto de zero por causa dos custos de ajustamento)
+
+---
+class: middle
+## Modelo
+
+Apresenta um modelo de oferta de trabalho com rigidez nas horas trabalhadas e custos de ajustamento
+
+Predições do modelo:
+
+1. Quando há custos de procura e rigidez nas horas, a elasticidade observada cresce com o tamanho da quina (e "em OLS" pelo tamanho da reforma)
+2. Por causa de restrições de horas e custos de procura, haverá "bunching agregado" perto dos kinks que se apliquem a uma maioria
+3. A quantidade de bunching agregado e individual é positivamente correlacionada ao longo das ocupações
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-5-grafico-22.png")
+```
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-5-grafico-23.png")
+```
+
+---
+class: middle
+## Bunching
+
+Considere uma função de utilidade quasilinear CES, que gera uma demanda por trabalho $h_i^* = \alpha_i \left( (1 - \tau)w \right)^{\epsilon}$ quando frente a uma restrição orçamentária (taxação) linear
+
+Se a taxação é *piecewise-linear*, com taxas marginais $\tau_1$ e $\tau_2$, então existe $\underline{\alpha}$ e $\bar{\alpha}$ tais que:
+
+$$h_i^* = \alpha_i \left( (1 - \tau_1)w \right)^{\epsilon} \text{ se } \alpha < \underline{\alpha},$$
+
+$$h_i^* = \alpha_i \left( (1 - \tau_2)w \right)^{\epsilon} \text{ se } \alpha > \bar{\alpha}$$
+
+e $h_K = K/w$ se $\alpha \in \left[ \underline{\alpha}, \bar{\alpha} \right]$, onde $\underline{\alpha} = h_K /\left( (1 - \tau_1)w \right)^{\epsilon}$ e $\bar{\alpha} = h_K / \left( (1 - \tau_2)w \right)^{\epsilon}$
+
+---
+class: middle
+## Bunching (II)
+
+Então a densidade de quem faz bunching, $B_{NL} = F(\bar{\alpha}) - F(\underline{\alpha})$
+
+$$= F(h_K / \left( (1 - \tau_2)w \right)^{\epsilon}) - F(h_K /\left( (1 - \tau_1)w \right)^{\epsilon})$$
+
+Fazendo uma aproximação de primeira ordem (Taylor):
+
+$$F(\bar{\alpha}) \approx F(\underline{\alpha}) + \frac{g(\alpha_i)  \left( (1 - \tau_1)w \right)^{\epsilon}}{2} \left[ h_K / \left( (1 - \tau_2)w \right)^{\epsilon} - h_K /\left( (1 - \tau_1)w \right)^{\epsilon}  \right]$$
+
+$$\Rightarrow \frac{B_{NL}}{h_K} = \frac{g(\alpha_i)}{2} \left[ \left( \frac{(1 - \tau_1)}{(1 - \tau_2)} \right)^{\epsilon} - 1 \right]$$
+
+
+---
+class: middle
+## Bunching (III)
+
+Para estimar a densidade contrafactual, ele estima um polinomial de ordem $q$ perto (mas fora) do entorno do kink, dividindo em bins $j$ e estimando: $$C_j = \sum_{i=0}^{q} \beta_i^0 (Z_j)^i + \sum_{i=-R}^{R} \gamma_i^0 \mathbb{1} \left[Z_j = i \right] + \varepsilon_j^0$$
+
+Se $\hat{C}_j = \sum_{i=0}^{q} \beta_i^0 (Z_j)^i$ é o polinomial retirando a área ao redor da quina, então $\hat{B}_N^0 = C_j - \hat{C}_j = \sum_{i=-R}^{R} \gamma_i^0$
+
+E daí calculamos $$\hat{b} = \frac{\hat{B}_N}{\sum_{j=-R}^{R} \hat{C}_j / (2R + 1)}$$
+
+O erro padrão pode ser mais facilmente calculado por bootstrap
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-5-grafico-24.png")
+```
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-5-grafico-25.png")
+```
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-5-grafico-26.png")
+knitr::include_graphics("figs/aula-5-grafico-27.png")
+```
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-5-grafico-33.png")
+```
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-5-grafico-28.png")
+```
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-5-grafico-29.png")
+```
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-5-grafico-30.png")
+```
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-5-grafico-31.png")
+```
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-5-grafico-34.png")
+```
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-5-grafico-35.png")
+```
+
+---
+class: middle
+
+```{r, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("figs/aula-5-grafico-32.png")
+```
+
+
+---
+class:middle
+# Referências
+<small>
+```{r refs, echo=FALSE, results="asis"}
+PrintBibliography(myBib, start=1)
+```
+</small>
+
+<!-- --- -->
+<!-- class:middle -->
+<!-- # Referências -->
+<!-- <small> -->
+<!-- ```{r refs2, echo=FALSE, results="asis"} -->
+<!-- PrintBibliography(myBib, start=6) -->
+<!-- ``` -->
+<!-- </small> -->

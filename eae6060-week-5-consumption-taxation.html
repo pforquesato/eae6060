@@ -3,8 +3,8 @@
   <head>
     <title>EAE-6060: Public Finance I</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Pedro Forquesato http://www.pedroforquesato.com Sala 19C/FEA2 - pforquesato@usp.br" />
-    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
+    <meta name="author" content="Pedro Forquesato http://www.pedroforquesato.com Sala 217/FEA2 - pforquesato@usp.br" />
+    <script src="libs/header-attrs-2.15/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
   </head>
@@ -16,7 +16,7 @@ class: center, middle, inverse, title-slide
 # EAE-6060: Public Finance I
 ]
 .author[
-### Pedro Forquesato<br/><a href="http://www.pedroforquesato.com" class="uri">http://www.pedroforquesato.com</a><br/>Sala 19C/FEA2 - <a href="mailto:pforquesato@usp.br" class="email">pforquesato@usp.br</a>
+### Pedro Forquesato<br/><a href="http://www.pedroforquesato.com" class="uri">http://www.pedroforquesato.com</a><br/>Sala 217/FEA2 - <a href="mailto:pforquesato@usp.br" class="email">pforquesato@usp.br</a>
 ]
 .institute[
 ### Departamento de Economia<br/>Universidade de São Paulo
@@ -35,178 +35,170 @@ class: inverse, middle, center
 
 ---
 class: middle
-## Fórmula da elasticidade inversa
+## Inverse elasticity rule
 
-Antes de entrar no modelo de taxação ótima, vamos comentar um resultado frequentemente evocado
+We know by now that *excess burden* of a tax on a good `\(k\)` is given by: `$$D_k (t_k ) = \frac{\epsilon^k_D \epsilon_S^k}{\epsilon_D^k + \epsilon_S^k} t_k^2 \frac{p_k x_k}{2}$$`
 
-Vimos no tópico 3 que o peso morto de um imposto em um bem `\(k\)` é `$$D_k (t_k ) = \frac{\epsilon^k_D \epsilon_S^k}{\epsilon_D^k + \epsilon_S^k} t_k^2 \frac{p_k x_k}{2}$$`
+So if we ignore *general equilibrium effects*, we might think that a planner concerned about minimizing efficiency loss will want to minimize the sum of deadweight loss  given a minimum revenue requirement: 
 
-Então *considerando apenas equilíbrio parcial*, podemos pensar num planejador minimizando o peso morto total `\(D(t) = \sum_k D_k (t_k)\)` sujeito a `\(R(t) = \sum_k t_k p_k x_k = \bar{R}\)`
-
-Nesse caso, se supormos que o budget share `\(p_k x_k / Y\)` é fixo, temos que: `$$t_k \frac{\epsilon_D^k \epsilon_S^k}{\epsilon_D^k + \epsilon_S^k} = \lambda \Rightarrow t_k^* = \lambda \left( \frac{1}{\epsilon_D^k} + \frac{1}{\epsilon_S^k} \right)$$`
-
-Essa é a famosa "fórmula da elasticidade inversa" para taxação indireta ótima
+`$$D(t) = \sum_k D_k (t_k) \text{ such that } R(t) = \sum_k t_k p_k x_k = \bar{R}$$`
 
 ---
 class: middle
-## Fórmula da elasticidade inversa (II)
+## Inverse elasticity rule
 
-A fórmula é um pouco "surpreendente", pois indica que a taxação indireta (quase) nunca deveria ser uniforme (ao contrário do que geralmente se vê pelo mundo)
+In that case, if we assume that budget share of each good `\(p_k x_k / Y\)` is fixed, we get as solution: `$$t_k \frac{\epsilon_D^k \epsilon_S^k}{\epsilon_D^k + \epsilon_S^k} = \lambda \Rightarrow t_k^* = \lambda \left( \frac{1}{\epsilon_D^k} + \frac{1}{\epsilon_S^k} \right)$$`
 
-Tem uma intuição clara: quanto menor as elasticidades, menor vai ser a distorção em quantidade pelo imposto: no limite, quando inelásticas, não há distorção, e o imposto é "de graça"
-
-Mas é derivada sob hipóteses muito fortes: em equilíbrio parcial e com análise de peso morto separadamente, o que só é coerente com zero elasticidades cruzadas, sem efeitos de EG ou efeito renda
+This is the famous **inverse elasticity rule** for indirect taxation &amp;mdash; but as we will see, it is only valid given some strict assumptions we made to get here
 
 ---
 class: middle
-## Modelo de taxação indireta ótima
+## Inverse elasticity rule
 
-Modelo original vem do gênio Ramsay em 1927 (!), redescoberta pelo Boiteux (1956) e extendida por Diamond-Mirrlees (1971)
+The intuition is clear: we know that **excess burden** is small when the market elasticities are small &amp;mdash; so we can tax these markets more heavily while still generating few inefficiencies
 
-Esses modelos supõem que o governo apenas pode taxar renda de forma linear, que podemos desconsiderar pois taxação de renda é igual a uma taxação uniforme no consumo (considere então SPG esse imposto zero)
+By this rule indirect taxation should never be homogeneous, even though we often observe that in the real world &amp;mdash; also counterintuitively, it would indicate we should heavily tax rice and wheat and tax little caviar
 
-A derivação está no Salanié, e é importante, mas vamos apresentar só o resultado final
-
----
-class: middle
-## Fórmula de Ramsey/Diamond
-
-Considere uma economia com produção que utiliza apenas trabalho e de forma linear
-
-Seja `\(b_i\)` a utilidade marginal **social** líquida do indivíduo `\(i\)`, que leva em conta:
-
-1. tanto o efeito direto de transferir recursos para `\(i\)` (o seu peso social dividido pelo custo sombra dos recursos públicos)
-2. como o efeito indireto de maior arrecadação pelo maior consumo de `\(i\)`
-
-E seja `$$\theta_k = \text{cov} \left( \frac{b_i}{\bar{b}}, \frac{IX_k^i}{X_k} \right)$$`
-
-a covariância entre o peso social líquido do indivíduo e o seu consumo do bem `\(k\)` (em relação à média)
+These problems come from the assumptions we made: partial equilibrium analysis of each market separately (zero cross-elasticities), no income effects and no concerns for redistribution 
 
 ---
 class: middle
-## Fórmula de Ramsey/Diamond (II)
+## Optimal indirect taxation
 
-Então a fórmula de taxação ótima é: `$$- \frac{\sum_j t_j \sum_i S^i_{kj}}{\sum_i X_k} = 1 - \bar{b} - \bar{b} \theta_k,$$`
+The original analysis of optimal consumption tax comes from Ramsay in 1927, rediscovered by Boiteux (1956) and extended by Diamond and Mirrlees (1971)
 
-onde `\(S_{kj}^i\)` é o termo `\(kj\)` da matriz de Slutsky, isso é, a derivada cruzada compensada 
+An important factor in optimal consumption taxation is whether we impose constraints on income tax and transfers (redistribution) &amp;mdash; if we do not, then we might want to use indirect taxes for redistribution
 
-O lado esquerdo é o **discouragement index** do bem `\(k\)`, e mede aproximadamente (menos) a redução percentual compensada do consumo do bem `\(k\)` pela taxação `\(t_k\)`
+The **Ramsey-Diamond optimal indirect taxation formula** is the general optimal indirect taxation when you can only impose linear income taxes (no redistribution) &amp;mdash; the derivation of the formula is in [Sal11] (and it is important!), but here we will only discuss its interpretation
 
-O lado direito varia em `\(k\)` apenas por (e negativamente em) `\(\theta_k\)`, ou seja quão importante socialmente são os consumidores do bem `\(k\)`: é o **fator distributivo**
-
----
-class: middle
-## Complementariedade com trabalho
-
-Com um consumidor representativo, `\(b_i = b\)` e portanto `\(\theta_k = 0\)`. Considerando o caso com 2 bens, pode se mostrar que: `$$t_1^* = - \frac{1 - b}{D} \frac{X_1 X_2}{q_2} \left( \epsilon_{10} + \epsilon_{11} + \epsilon_{12} \right),$$`
-
-onde `\(D\)` é o determinante da matriz de Slutsky e consideramos o lazer o bem 0. Assim: `$$t_1^* - t_2^* = - \frac{1 - b}{D} X_1 X_2 \left( \epsilon_{10} - \epsilon_{20} \right)$$`
-
-Mostra-se assim que no ótimo o bem mais taxado é aquele mais complementar com o lazer (e menos aquele complementar com o trabalho)!
 
 ---
 class: middle
-## Fórmula da elasticidade inversa (III)
+## Ramsey-Diamond formula
 
-Voltando à equação ótima geral, se assumirmos, além do acima, também que as elasticidades cruzadas são zero, e lembrando que `\(\epsilon_{kk} = - S_{kk} q_k / X_k\)`  então: `$$\frac{t_k^*}{1 + t_k^*} = \frac{1 - b}{\epsilon_{kk}}$$`
+If `\(b_i\)` the **net social marginal utility** of individual `\(i\)`, taking into account both: (i) the direct effect of transferring resources to `\(i\)` (its *social welfare weight* divided by the *shadow cost of public funds*)
 
-Essa é a fórmula do começo, mas com a suposição de retornos constantes, portanto `\(\epsilon_S = \infty\)`
-
-Isso foi usado para justificar "sin taxes" sobre tabaco e álcool (vamos estudar isso ainda nesse tópico!)
-
-Notem as suposições extra: agente representativo e sem elasticidades cruzadas!
-
-Sob que condições temos cobrança uniforme? Deaton (1981) mostrou que sse quasi-separabilidade, i.e., `\(e(u, \mathbf{q}, w) = e^* (u, w, B(u, \mathbf{q}))\)`
-
-Mas há muitas razões "extra-modelo" para taxação uniforme!
+And (ii) the indirect effect that more consumption by `\(i\)` increases government revenue &amp;mdash; and let `\(\theta_k\)` be the covariance between individual `\(i\)`'s net social marginal utility and their consumption of good `\(k\)` (compared to the average): `$$\theta_k = \text{cov} \left( \frac{b_i}{\bar{b}}, \frac{IX_k^i}{X_k} \right)$$`
 
 ---
 class: middle
-## Com taxação direta
+## Ramsey-Diamond formula
 
-Agora, se todos os consumidores são iguais, permitindo taxação não linear da renda, na verdade o governo deveria zerar impostos indiretos e taxar de forma lump-sum todos na renda!
+Then the **Ramsey-Diamond optimal indirect taxation formula** is (where `\(S_{kj}^i\)` is the the `\(k,j\)` term of the Slutsky matrix of compensated cross-derivatives):
 
-Suponha agora que a função de utilidade é fracamente separável, isto é, `\(U(\mathbf{X}, L, w) = \tilde{U} (h(\mathbf{X}), L, w)\)`, onde `\(h\)` é um agregador
+`$$- \frac{\sum_j t_j \sum_i S^i_{kj}}{\sum_i X_k} = 1 - \bar{b} - \bar{b} \theta_k,$$`
 
-Atkinson-Stiglitz (1976) mostram que em um modelo de Mirrlees com taxação direta não-linear, nesse caso a taxação ótima é uniforme (por exemplo zero)
 
----
-class: middle
-## Com taxação direta (II)
 
-Intuitivamente, no caso anterior, sem a capacidade de redistribuir por imposto de renda, a taxação ótima faz isso. Quando podemos, não precisamos mais dela para esse propósito
+The left side is the **discouragement index** of good `\(k\)`, and measures approximately the absolute value of the percentage compensated change in consumption of `\(k\)` because of tax `\(t_k\)` (its efficiency loss)
 
-Nesse modelo a única fonte de heterogeneidade é a habilidade, e ela só reflete em diferenças na renda, então pelo **targeting principle**, a taxação deve ser sobre a renda
-
-Se há mais de uma heterogeneidade (por exemplo de riqueza) ou se a separabilidade fraca não vale, o resultado deixa de valer
-
-Na prática, também é bom ter impostos indiretos maiores que zero para expandir a base tributária e combater evasão/sonegação
+The right side varies in `\(k\)` only because of `\(\theta_k\)`, the social weights for consumers of good `\(k\)`: it is the **distributive factor**
 
 ---
 class: middle
-## Eficiência produtiva
+## Complementarity with leisure
 
-Diamond-Mirrlees (1971) mostraram que a taxação ótima sempre deixa a economia na fronteira de possibilidades de produção
+The Ramsey-Diamond formula is general, but complicated &amp;mdash; one intuition we can derive from it is that optimal taxation *when we cannot redistribute by income taxes* will trade-off efficiency and equity
 
-Isso implica que a taxa marginal de substituição técnica entre dois insumos deve ser igual em todos os seus usos produtivos
+A more subtle interpretation we can achieve when we abstract from redistribution concerns by considering a **representative agent** &amp;mdash; then, `\(b_i = b\)` and therefore `\(\theta_k = 0\)`
 
-Essa propriedade só é possível se toda a distorção estiver no consumo: não há taxação não uniforme sobre o processo produtivo, apenas no consumo
+Then we consider the case with only two taxable goods, `\(1\)` and `\(2\)`, and a third good `\(0\)` that *cannot be taxed*: leisure
 
-A intuição é que qualquer imposto sobre a produção distorce a produção **e** o consumo, então deve ser pior que um que apenas distorce o consumo
+---
+class: middle
+## Complementarity with leisure
 
-Em geral esse é um argumento forte contra a taxação de bens intermediários, e no mundo real de fato sistemas tributários tendem a taxar apenas a produção final
+Then it can be shown that the optimal tax on good `\(1\)` satisfies (where `\(D\)` is the determinant of the Slutsky Matrix): `$$t_1^* = - \frac{1 - b}{D} \frac{X_1 X_2}{q_2} \left( \epsilon_{10} + \epsilon_{11} + \epsilon_{12} \right),$$`
+
+`$$\therefore \ t_1^* - t_2^* = - \frac{1 - b}{D} X_1 X_2 \left( \epsilon_{10} - \epsilon_{20} \right)$$`
+
+Tax on good `\(1\)` will be higher *iff* good `\(i\)` is more **complementary with leisure** &amp;mdash; the intuition is that since leisure cannot be taxed, it is "overconsumed" (*labor is undersupplied*), which should be corrected by optimal taxation
+
+---
+class: middle
+## Back to the inverse elasticity rule
+
+Let's now add to the *representative agent* the assumption of **zero cross-elasticities** &amp;mdash; in particular, no good is complementary (or substitute) to leisure
+
+Then, since `\(\epsilon_{kk} = - S_{kk} q_k / X_k\)`, the *Ramsey-Diamond formula* becomes simply: `$$\frac{t_k^*}{1 + t_k^*} = \frac{1 - b}{\epsilon_{kk}}$$`
+
+This is the *inverse elasticity rule* with the additional assumption that `\(\epsilon_S = \infty\)` (constant returns)!
+
+---
+class: middle
+## Optimal indirect taxation
+
+These 3 results give us the main intuitions about optimal indirect taxation:
+
+1. *If we cannot redistribute by taxes and transfers* (more about this soon), then the optimal tax rates should tax less heavily goods consumed by the poor, effectively redistributing income
+
+2. *Since leisure cannot be taxed*, in the optimum we will generally want to correct this by taxing more heavily goods complementary to leisure
+
+3. Since deadweight loss is increasing in elasticities, we will want to tax less more elastic markets &amp;mdash; **only if points 1 and 2 are abstracted from** this is the main determinant of optimal tax rates
+
+---
+class: middle
+## Targeting principle
+
+So far we examined the case when governments cannot use income taxes for redistribution &amp;mdash; if they can, we do not need to redistribute income with the consumption tax anymore: the income tax does it *better*
+
+This **targeting principle** says we should target heterogeneity directly: if the difference between individuals is income-generating abilities, then we should only tax those (and not consumption) [AS76] 
+
+This is only valid if there is only one source of heterogeneity, if there is more (like inherited wealth), we might want to use more instruments &amp;mdash; in practice, it is also useful for expanding the tax base and reducing tax evasion
+
+---
+class: middle
+## Uniform tax rates
+
+So far, all three formulas we considered leave little space for uniform tax rates &amp;mdash; which is suprising!, given that many countries' tax systems have this feature and so many economists defend it
+
+If the utility function is weakly-separable, i.e. `\(U(X, L, w) = U(h(X), L, w)\)`, and we can tax income non-linearly, then an uniform indirect tax (in particular zero) is optimal (**targeting principle**) [AS76] 
+ 
+Without nonlinear income taxation, uniform rates are optimal under quasi-separability: `\(e(u, \mathbf{q}, w) = e^* (u, w, B(u, \mathbf{q}))\)` [Dea81] &amp;mdash; but there are more reasons "outside the model", such as political economy considerations
+
+---
+class: middle
+## Productive efficiency
+
+A final seminal result is due to [DM71]: optimal indirect taxation should always keep the economy in the **production possibility frontier**
+
+That means the marginal rate of technical substitution between inputs should not be distorted: we should *only tax final sales* &amp;mdash; most consumption tax systems function like this, such as the sales tax and VAT
+
+The idea is that a tax on the final good distorts consumption, while a tax on an intermediary good distorts consumption *and* production
 
 ---
 class: inverse, middle, center
 
-# Naritomi, J. (2019). “Consumers as Tax Auditors”
+# Naritomi, J. (2019). “Consumers as tax auditors”
 
 ---
 class: middle
-## Evasão fiscal
+## Tax evasion
 
-Como vimos anteriormente, um motivo para termos impostos indiretos é para expandir a base tributária e combater evasão/sonegação
+As we saw, a reason for having indirect taxation is to reduce tax evasion &amp;mdash; in fact, sales being easier to observe is the main reason why most developing countries have a large share of tax revenues from consumption taxes
 
-Nesse sentido, o VAT é um dos melhores impostos, porque dá incentivos às firmas de reportar receita de outras firmas na cadeia produtiva (*third-party reporting*)
+In this sense, the *value-added tax* (VAT) is great, since it is built to give incentives for firms to generate **third-party reporting** of the tax liabilities of other firms &amp;mdash; the weak link here, however, is the sale to the consumer 
 
-Mas uma fraqueza do VAT é que esse incentivo não existe no consumidor final
+This article evaluates the "Nota Fiscal Paulista", which was built exactly to solve this problem &amp;mdash; the NFP rewards consumers for checking whether the purchase was recorded (and consequently the tax paid)
 
-O artigo da Joana examina o Nota Fiscal Paulista, um programa desenhado exatamente para abordar esse gargalo
-
-A NFP recompensa consumidores (com "cash-back" e sorteios) por checar online o pagamento dos impostos pelas suas compras
 
 ---
 class: middle
-## Resultados
+## Empirical strategy
 
-Em geral, o programa foi um grande sucesso: vendas reportadas aumentaram 21% em 4 anos. Receita governamental (isso é, arrecadação menos prêmios) aumentou 9,3%
+Her strategy is to compare the reported revenue between retail (**treatment group**, because it does final sales) and wholesail (**control group**, because it sells mainly B2B and it is not affected), before and after the program
 
-Firmas com uma quantidade de vendas maior tiveram maior efeito
+This is a **differences-in-differences** regression (here a 2WFE version): `$$\log R_{st} = \eta_s + \gamma_t + \beta \text{Treat}_s \cdot \text{Post}_t + u_{st}$$`
 
-Quando o número de consumidores é grande, isso dificulta a colusão entre consumidores e vendedores para sonegar impostos
-
-Aprendizado: firmas reportam 7% a mais de vendas (3% de receita) ao receber a primeira reclamação
-
-Firmas reportam consumir mais insumos, mas não o suficiente para contrabalancear o aumento das vendas
-
-Consumidores pedem NF mais depois de receber um prêmio
-
----
-class: middle
-## Estratégia empírica
-
-Diferenças-em-diferenças: compara mudança em receita reportada entre varejo (tratamento) e atacado (controle), antes e depois do começo do programa
-
-Estima tanto a versão do DD original: `$$\log R_{st} = \eta_s + \gamma_t + \beta \text{Treat}_s \cdot \text{Post}_t + u_{st}$$`
-
-Como os efeitos dinâmicos: `$$\log R_{st} = \eta_s + \gamma_t + \sum_{k=-8}^{8} \beta^k ( \text{Treat}_s \cdot \text{Period}_t^k ) + u_{st}$$`
-
-E efeitos heterogêneos: `$$\log R_{its} = \eta_i + \gamma \text{Post}_t + \sum_{m=1}^{2} \alpha^m ( d_{ms} \cdot DD_{ts}) + \epsilon_{its}$$`
+But she also extends for dynamic and heterogeneous effects: `$$\log R_{st} = \eta_s + \gamma_t + \sum_{k=-8}^{8} \beta^k ( \text{Treat}_s \cdot \text{Period}_t^k ) + u_{st}$$`
+`$$\log R_{its} = \eta_i + \gamma \text{Post}_t + \sum_{m=1}^{2} \alpha^m ( d_{ms} \cdot DD_{ts}) + u_{its}$$`
 
 ---
 class: middle
 
-&lt;img src="figs/aula-6-grafico-1.png" width="100%" /&gt;&lt;img src="figs/aula-6-grafico-2.png" width="100%" /&gt;
+&lt;img src="figs/aula-6-grafico-1.png" width="75%" style="display: block; margin: auto;" /&gt;&lt;img src="figs/aula-6-grafico-2.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+Figure 1 shows how NFP treated retail and not wholesale firms &amp;mdash; while in Figure 2 we see that retail and wholesales had **parallel trends** before the program, but diverged after its enactment
 
 ---
 class: middle
@@ -227,6 +219,23 @@ class: middle
 class: middle
 
 &lt;img src="figs/aula-6-grafico-6.png" width="100%" /&gt;
+
+
+---
+class: middle
+## Resultados
+
+Em geral, o programa foi um grande sucesso: vendas reportadas aumentaram 21% em 4 anos. Receita governamental (isso é, arrecadação menos prêmios) aumentou 9,3%
+
+Firmas com uma quantidade de vendas maior tiveram maior efeito
+
+Quando o número de consumidores é grande, isso dificulta a colusão entre consumidores e vendedores para sonegar impostos
+
+Aprendizado: firmas reportam 7% a mais de vendas (3% de receita) ao receber a primeira reclamação
+
+Firmas reportam consumir mais insumos, mas não o suficiente para contrabalancear o aumento das vendas
+
+Consumidores pedem NF mais depois de receber um prêmio
 
 ---
 class: inverse, middle, center
@@ -607,6 +616,27 @@ O peso morto é zero se `\(\theta^c = 0\)`, e quando é maior que zero, `\(\text
 Como o peso morto é quadrático em saliência e linear na elasticidade, seus efeitos são diferentes
 
 Peso morto pode ser positivo mesmo que `\(\partial x / \partial t^S = 0\)` se houver efeito renda, pois o agente acaba consumindo mais do bem do que deveria
+
+
+---
+class:middle
+# Referências
+&lt;small&gt;
+[AS76] A. B. Atkinson and J. E. Stiglitz. "The design of tax structure:
+direct versus indirect taxation". In: _Journal of public Economics_
+6.1-2 (1976), pp. 55-75.
+
+[Dea81] A. Deaton. "Optimal taxes and the structure of preferences".
+In: _Econometrica: Journal of the Econometric Society_ (1981), pp.
+1245-1260.
+
+[DM71] P. A. Diamond and J. A. Mirrlees. "Optimal taxation and public
+production I: Production efficiency". In: _The American economic
+review_ 61.1 (1971), pp. 8-27.
+
+[Sal11] B. Salanie. _The economics of taxation_. MIT press, 2011.
+&lt;/small&gt;
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

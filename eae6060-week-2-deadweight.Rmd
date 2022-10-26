@@ -448,7 +448,7 @@ class: middle
 ## Model
 
 Consider a general utility function $u^{i} (x^i_0 , ..., x^i_J ) = u^i (\mathbf{x^i})$ where $\mathbf{x^i}$ is a vector of pre-tax expenses (with price normalized to 1). Given a piecewise-linear function of taxes paid $T$, the budget constraint is: $$\sum_{j=0}^{J} x_j^i + T(x_0^i , ..., x_J^i ) = y^i \Rightarrow \sum_{j=0}^{J} (1 + \tau_{j}^{i}) x_j^i = Y^i$$
-Which gives us the *first order conditions* of individual optimization:
+Where $Y^i \equiv y^i + \sum_{j=0}^{J} \tau_j^i (\theta) x_j^i - T(x_0^i , ..., x_J^i )$ is the *virtual income* &mdash; this gives us the *first order conditions* of individual optimization:
 
  $$\text{[FOC:] } \frac{\partial u^i}{\partial x^i_j} - \lambda^i (1 + \tau^i_j) = 0$$
 
@@ -470,7 +470,7 @@ $$\frac{dv^i / d\theta}{\lambda^i} = - \sum_{j=0}^{J} x_j^i \frac{d \tau_j^i}{d\
 class: middle
 ## Welfare effects of a policy change
 
-Now notice that by BC, $Y^i \equiv y^i + \sum_{j=0}^{J} \tau_j^i (\theta) x_j^i - T(x_0^i , ..., x_J^i )$. Differentiating in $\theta$, we get: $$\frac{d Y^i}{d\theta} = \sum_{j=0}^{J} \frac{d \tau_j^i}{d\theta} x_j^i - \frac{\partial T^i}{\partial \theta}$$
+But the virtual income is given by $Y^i \equiv y^i + \sum_{j=0}^{J} \tau_j^i (\theta) x_j^i - T(x_0^i , ..., x_J^i )$ &mdash; differentiating in $\theta$, we get: $$\frac{d Y^i}{d\theta} = \sum_{j=0}^{J} \frac{d \tau_j^i}{d\theta} x_j^i - \frac{\partial T^i}{\partial \theta}$$
 
 
 From the *envelope theorem* and the assumption of no other distortions we can arrive at the **money-metric effect on utility** of the policy reform

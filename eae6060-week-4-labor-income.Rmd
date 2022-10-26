@@ -553,122 +553,123 @@ class: inverse, middle, center
 class: middle
 ## Bunching
 
-Bunching: literatura que tenta estimar elasticidade da renda tributável olhando como contribuintes se agrupam em quinas (*kinks*) na curva de imposto marginal
+A technique recently developed in public economics literature is **bunching**: to estimate taxable income elasticity by looking at how tax payers bunch at *kink* points in the tax schedule (or *notches*, see next paper)
 
-O grande insight é que sob comportamento racional, a quantidade de contribuintes se agrupando na quina informa sobre a taxa marginal de substituição entre consumo e lazer
+The insight is that in a rational choice model, the amount of tax payers at a kink is informative about the marginal rate of substitution between effort and leisure
 
-Heuristicamente, se a taxa marginal sobe de $60\%$ para $80\%$, vão se agrupar todos (e apenas eles) cujo o custo (em termos de menor lazer) de trabalhar `$`1 extra é maior que $0.6$ mas menor que $0.8$
-
----
-class: middle
-## Contribuição
-
-O insight do bunching gerou uma longa literatura, mas tem problemas: ele é drasticamente dependente de comportamento bastante racional e mercado sem fricções
-
-No mundo real é muito mais difícil controlar a renda tributável, especialmente para trabalhadores, o que limita as possibilidades de bunching
-
-Além disso, o custo de bem-estar de não fazer bunching é pequeno (de 2a ordem), e há evidências que pessoas fazem bunching só no maior dos *kinks* (Mortenson `&` Whitten, 2020)
-
----
-class: middle
-## Contribuição (II)
-
-Esse artigo analisa o papel das fricções no mercado de trabalho para constranger o bunching
-
-Usa dados da Dinamarca, e mostra que horas são definidas coletivamente em geral, mas há uma tendência das negociações coletivas fazerem um "bunching agregado"
-
-Também argumenta que com custos de ajustamento (realista!), alterações maiores nos impostos geram elasticidades estimadas maiores nos dados
-
-Discute o efeito dessas fricções em gerar diferenças em elasticidade "macro" (razoavelmente altas e iguais à estrutural) e elasticidades "micro" (perto de zero por causa dos custos de ajustamento)
-
----
-class: middle
-## Modelo
-
-Apresenta um modelo de oferta de trabalho com rigidez nas horas trabalhadas e custos de ajustamento
-
-Predições do modelo:
-
-1. Quando há custos de procura e rigidez nas horas, a elasticidade observada cresce com o tamanho da quina (e "em OLS" pelo tamanho da reforma)
-2. Por causa de restrições de horas e custos de procura, haverá "bunching agregado" perto dos kinks que se apliquem a uma maioria
-3. A quantidade de bunching agregado e individual é positivamente correlacionada ao longo das ocupações
+Heuristically, if the marginal tax rises from 60% to 80%, those (and only those) for which the cost of earning an extra dollar is higher than 0.6 but lower than 0.8 will stop working
 
 ---
 class: middle
 
-```{r, echo=FALSE, out.width = '100%'}
-knitr::include_graphics("figs/aula-5-grafico-22.png")
+```{r, echo=FALSE, out.width = '100%', fig.align='center'}
+knitr::include_graphics("figs/aula-4-grafico-28.png")
 ```
 
+In a linear budget set (dashed line), workers with different abilities $n$ choose different levels of taxable income &mdash; but a piecewise linear tax system creates **kinks**, where nonconvexities cause workers with different abilities to choose the same amount of earnings (**bunching**) `r Citep(myBib, "kleven2016bunching")`
+
 ---
 class: middle
 
-```{r, echo=FALSE, out.width = '100%'}
+```{r, echo=FALSE, out.width = '80%', fig.align='center'}
 knitr::include_graphics("figs/aula-5-grafico-23.png")
 ```
 
----
-class: middle
-## Bunching
-
-Considere uma função de utilidade quasilinear CES, que gera uma demanda por trabalho $h_i^* = \alpha_i \left( (1 - \tau)w \right)^{\epsilon}$ quando frente a uma restrição orçamentária (taxação) linear
-
-Se a taxação é *piecewise-linear*, com taxas marginais $\tau_1$ e $\tau_2$, então existe $\underline{\alpha}$ e $\bar{\alpha}$ tais que:
-
-$$h_i^* = \alpha_i \left( (1 - \tau_1)w \right)^{\epsilon} \text{ se } \alpha < \underline{\alpha},$$
-
-$$h_i^* = \alpha_i \left( (1 - \tau_2)w \right)^{\epsilon} \text{ se } \alpha > \bar{\alpha}$$
-
-e $h_K = K/w$ se $\alpha \in \left[ \underline{\alpha}, \bar{\alpha} \right]$, onde $\underline{\alpha} = h_K /\left( (1 - \tau_1)w \right)^{\epsilon}$ e $\bar{\alpha} = h_K / \left( (1 - \tau_2)w \right)^{\epsilon}$
+Empirically, they look at changes in marginal tax rates in Denmark in 2000
 
 ---
 class: middle
-## Bunching (II)
+## Bunching model
 
-Então a densidade de quem faz bunching, $B_{NL} = F(\bar{\alpha}) - F(\underline{\alpha})$
+Consider a quasilinear utility in consumption with constant elasticity of labor supply:
+
+$$u_i (c, h) = c - \alpha_i^{1/\epsilon} \frac{h^{1 + 1/\epsilon}}{1 + 1/\epsilon}$$
+
+Given a linear taxation $1 - \tau$, so that the budget constraint is $c = (1 - \tau)hw$ it generates Marshallian labor supply that varies smoothly on the ability (or disutility of work) parameter $\alpha_i$ (*there is no bunching*): 
+
+$$h_i^* = \alpha_i \left( (1 - \tau)w \right)^{\epsilon}$$
+
+
+---
+class: middle
+## Bunching model
+
+However, when the tax-schedule is *piecewise-linear*, at the *kink* where MTR rises from $\tau_1$ to $\tau_2 > \tau_1$, then there is $\underline{\alpha}$ and $\bar{\alpha}$ such that:
+
+$$h_i^* = \alpha_i \left( (1 - \tau_1)w \right)^{\epsilon} \text{ if } \alpha < \underline{\alpha},$$
+
+$$h_i^* = \alpha_i \left( (1 - \tau_2)w \right)^{\epsilon} \text{ if } \alpha > \bar{\alpha}$$
+
+and $h_K = K/w$ if otherwise $\alpha \in \left[ \underline{\alpha}, \bar{\alpha} \right]$, where $\underline{\alpha} = h_K /\left( (1 - \tau_1)w \right)^{\epsilon}$ and $\bar{\alpha} = h_K / \left( (1 - \tau_2)w \right)^{\epsilon}$
+
+---
+class: middle
+## Bunching model
+
+If $\alpha_i \sim F(\alpha_i)$, then the model predicts a *bunching density* of $$B_{NL} = F(\bar{\alpha}) - F(\underline{\alpha})$$
 
 $$= F(h_K / \left( (1 - \tau_2)w \right)^{\epsilon}) - F(h_K /\left( (1 - \tau_1)w \right)^{\epsilon})$$
 
-Fazendo uma aproximação de primeira ordem (Taylor):
+Which identifies (given these *parametric assumptions*) the **taxable income elasticity** $\epsilon$ &mdash; by a Taylor approximation, if $g$ is the counterfactual distribution without kinks:
 
 $$F(\bar{\alpha}) \approx F(\underline{\alpha}) + \frac{g(\alpha_i)  \left( (1 - \tau_1)w \right)^{\epsilon}}{2} \left[ h_K / \left( (1 - \tau_2)w \right)^{\epsilon} - h_K /\left( (1 - \tau_1)w \right)^{\epsilon}  \right]$$
 
-$$\Rightarrow \frac{B_{NL}}{h_K} = \frac{g(\alpha_i)}{2} \left[ \left( \frac{(1 - \tau_1)}{(1 - \tau_2)} \right)^{\epsilon} - 1 \right]$$
+---
+class: middle
+## Empirical estimation
+
+$$\therefore \frac{B_{NL}}{h_K} = \frac{g(\alpha_i)}{2} \left[ \left( \frac{(1 - \tau_1)}{(1 - \tau_2)} \right)^{\epsilon} - 1 \right]$$
+
+To estimate the counterfactual density, they estimate a $q$ order polynomial close to (but outside of) the kink threshold, divinding in $j\in J$ bins and estimating: $$C_j = \sum_{i=0}^{q} \beta_i^0 (Z_j)^i + \sum_{i=-R}^{R} \gamma_i^0 \mathbb{1} \left[Z_j = i \right] + \varepsilon_j^0$$
+
+---
+class: middle
+## Empirical estimation
+
+If $\hat{C}_j = \sum_{i=0}^{q} \beta_i^0 (Z_j)^i$ the polynomial estimated removing the kink area, then we can estimate the bunching by $\hat{B}_N^0 = C_j - \hat{C}_j = \sum_{i=-R}^{R} \gamma_i^0$
+
+And then we estimate: $$\hat{b} = \frac{\hat{B}_N}{\sum_{j=-R}^{R} \hat{C}_j / (2R + 1)} \text{ and } \epsilon = \frac{\hat{b}}{K\ln \left( \frac{1-\tau_1}{1-\tau_2}\right)}$$
+
+Standard errors can be estimated by bootstrap
 
 
 ---
 class: middle
-## Bunching (III)
 
-Para estimar a densidade contrafactual, ele estima um polinomial de ordem $q$ perto (mas fora) do entorno do kink, dividindo em bins $j$ e estimando: $$C_j = \sum_{i=0}^{q} \beta_i^0 (Z_j)^i + \sum_{i=-R}^{R} \gamma_i^0 \mathbb{1} \left[Z_j = i \right] + \varepsilon_j^0$$
+```{r, echo=FALSE, out.width = '60%', fig.align='center'}
+knitr::include_graphics("figs/aula-5-grafico-22.png")
+```
 
-Se $\hat{C}_j = \sum_{i=0}^{q} \beta_i^0 (Z_j)^i$ é o polinomial retirando a área ao redor da quina, então $\hat{B}_N^0 = C_j - \hat{C}_j = \sum_{i=-R}^{R} \gamma_i^0$
+Tax changes might have a smaller effect on behavior because adjusting earnings is costly (**adjustment costs**): often involves changing jobs, choosing different amounts of education, etc &mdash; this would lead us to underestimate the *elasticity of taxable income* when looking at the empirical data
 
-E daí calculamos $$\hat{b} = \frac{\hat{B}_N}{\sum_{j=-R}^{R} \hat{C}_j / (2R + 1)}$$
-
-O erro padrão pode ser mais facilmente calculado por bootstrap
 
 ---
 class: middle
 
-```{r, echo=FALSE, out.width = '100%'}
+```{r, echo=FALSE, out.width = '80%', fig.align='center'}
 knitr::include_graphics("figs/aula-5-grafico-24.png")
 ```
 
+Tax brackets change yearly because of policy changes and indirectly per inflation &mdash; this allows us to see if tax payers "follow" the kinks
+
 ---
 class: middle
 
-```{r, echo=FALSE, out.width = '100%'}
+```{r, echo=FALSE, out.width = '80%', fig.align='center'}
 knitr::include_graphics("figs/aula-5-grafico-25.png")
 ```
 
+**Bunching** is the difference between the observed histogram of earnings and the contrafactual fitted line in red &mdash; and it follows the predictable patterns: it is higher in married women vs single men, and in careers with more control over wages, like teachers (vs military)
+
 ---
 class: middle
 
-```{r, echo=FALSE, out.width = '100%'}
+```{r, echo=FALSE, out.width = '80%', fig.align='center'}
 knitr::include_graphics("figs/aula-5-grafico-26.png")
 knitr::include_graphics("figs/aula-5-grafico-27.png")
 ```
+
+Even though tax brackets change every year, the histogram of earnings exhibits bunching every year
 
 ---
 class: middle
@@ -677,54 +678,43 @@ class: middle
 knitr::include_graphics("figs/aula-5-grafico-33.png")
 ```
 
+Bunching analysis estimates (plausibly) unreasonably small elasticities of labor supply to taxation, even in subsamples where it is known to be large (such as married women) &mdash; the authors propose this is because of *adjustment costs*
+
 ---
 class: middle
 
-```{r, echo=FALSE, out.width = '100%'}
+```{r, echo=FALSE, out.width = '80%', fig.align='center'}
 knitr::include_graphics("figs/aula-5-grafico-28.png")
 ```
 
----
-class: middle
-
-```{r, echo=FALSE, out.width = '100%'}
-knitr::include_graphics("figs/aula-5-grafico-29.png")
-```
+In 2001 there was a change in the top MTR tax bracket &mdash; we observe bunching at the new tax bracket, not at the 1997 one, even if adjusted by inflation or average wage growth: this points towards an intentional movement towards the kink
 
 ---
 class: middle
 
-```{r, echo=FALSE, out.width = '100%'}
+```{r, echo=FALSE, out.width = '70%', fig.align='center'}
 knitr::include_graphics("figs/aula-5-grafico-30.png")
 ```
 
+But teachers bunch at the kink, *even those that do not have tax changes at that point*: this is evidence of **aggregate bunching**, namely that unions and professional associations lead wages to bunch at the kink, not individual behavior
+
 ---
 class: middle
 
-```{r, echo=FALSE, out.width = '100%'}
+```{r, echo=FALSE, out.width = '80%', fig.align='center'}
 knitr::include_graphics("figs/aula-5-grafico-31.png")
 ```
 
----
-class: middle
+Tax payers with large deductions seem to bunch at their *individual kink*, while tax payers with small deductions can afford to depend only on aggregate bunching and be close enough to their kink
 
-```{r, echo=FALSE, out.width = '100%'}
-knitr::include_graphics("figs/aula-5-grafico-34.png")
-```
 
 ---
-class: middle
+class: inverse, middle, center
 
-```{r, echo=FALSE, out.width = '100%'}
-knitr::include_graphics("figs/aula-5-grafico-35.png")
-```
+# Kleven, H. and M. Waseem (2013). “Using notches to uncover optimization frictions and structural elasticities: Theory and evidence from Pakistan”
 
 ---
 class: middle
-
-```{r, echo=FALSE, out.width = '100%'}
-knitr::include_graphics("figs/aula-5-grafico-32.png")
-```
 
 
 ---

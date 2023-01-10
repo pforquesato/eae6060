@@ -3,7 +3,7 @@ Class material for University of São Paulo's course EAE6060 - Public Finance
 
 Slides and the corresponding rmarkdown (xaringan) files
 
-More information about the course in: https://www.pedroforquesato.com/pages/eae6060-2022.html
+More information about the course in the [[Syllabus]](https://www.pedroforquesato.com/eae6060/eae6060-20222.html
 
 Course slides are in English.
 

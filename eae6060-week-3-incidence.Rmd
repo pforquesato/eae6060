@@ -555,7 +555,7 @@ The *share* part of the instrument generates cross-section variation and the *sh
 
 $$\log P_{ist} = \rho_{MC, \epsilon} \log MC_{it} + \gamma X_{nst} + \eta_i + \pi_t + \varepsilon_{ist}$$
 
-Where $Y_{ist}$ is the outcome (prices, marginal costs and mark-up), $Z_{nst}$ is the shift-share instruments, $X_{nst}$ are control variables, $i$ is the production plant, $t$ the time, $s$ state and $n$ the industry
+Where $Y_{ist}$ is the outcome (prices, marginal costs and mark-up), $Z_{nst}$ is the shift-share instruments, $X_{nst}$ are control variables, $i$ is the production plant, $t$ the time, $s$ state, and $n$ the industry
 
 
 ---

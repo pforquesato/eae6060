@@ -485,7 +485,7 @@ Finalmente, eles olham para o mercado de álcool, que contém impostos na etique
 class: middle
 
 ```{r, echo=FALSE, out.width = '100%'}
-knitr::include_graphics("figs/aula-5-grafico-1.png")
+knitr::include_graphics("figs/eae0310-4-2.png")
 ```
 
 ---

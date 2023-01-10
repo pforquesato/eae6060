@@ -1,0 +1,275 @@
+---
+title: "EAE6060: Public Finance"
+author: "Prof: Pedro Forquesato<br/>pforquesato@usp.br<br/>Faculdade de Economia, Administração, Contabilidade e Atuária<br />Universidade de São Paulo"
+date: "2022/2"
+output:
+  prettydoc::html_pretty:
+    #toc_float: yes
+    theme: tactile
+  pdf_document:
+    toc: no
+---
+
+## Overview
+
+This bimester course covers modern theory and evidence in public finance. In modern economies, the public sector is responsible for over one third of the economy and one-fifth of the employment. Moreover, a large share (in some countries over half) of the national income is absorbed and redistributed through taxation. Therefore, understanding the effects and optimal implementation of tax systems is essential to a good economy. In this course we cover behavioral responses to taxation, as well as optimal labor income and consumption taxation. Throughout, our focus will be on understanding the techniques for empirically estimating relevant statistics for public policy.
+
+## Readings
+
+### Introduction to public finance 
+
+[[Slides]](https://www.pedroforquesato.com/eae6060/eae6060-week-1-intro.html)
+
+($*$) **Atkinson & Stiglitz, chs. 1 and 11.**
+
+Giambiagi, F., Alem, A. and S. Pinto (2017). "Finanças Públicas," Elsevier Brasil, cap. 10.
+
+Musgrave, R. (1985). “A Brief History of Fiscal Doctrine,” Handbook of Pub. Econ., vol. 1, 1-59.
+
+Auerbach, A. and K. Hassett (2002). “A New Measure of Horizontal Equity,” American Economic Review, 1116-1125.
+
+Diamond, P. and E. Saez (2011). "The case for a progressive tax: from basic research to policy recommendations," Journal of Economic Perspectives, 25(4), 165-90.
+
+Alvaredo, F., Atkinson, A., T. Piketty and E. Saez (2013). “The Top 1 Percent in International  and  Historical  Perspective,” Journal of Economic Perspectives 27 (3), 3-20.
+
+Kleven, H. (2014). “How Can Scandinavians Tax So Much?,” Journal of Economic Perspectives 28(4), pp. 77–98.
+
+Piketty, T. (2014). "Capital in the Twenty-First Century," Harvard University Press. Chs. 13 to 16.
+
+### Topic 1. Efficiency costs of taxation
+
+[[Slides]](https://www.pedroforquesato.com/eae6060/eae6060-week-2-deadweight.html)
+
+($*$) **Salanié, ch. 2.**
+
+Auerbach, A. (1985). “The Theory of Excess Burden and Optimal Taxation,” Handbook of Pub. Econ., vol. 1, pp. 61-127.
+
+Auerbach, A. and J. Hines (2002). “Taxation and Economic Efficiency,” Handbook of Pub. Econ., vol. 3, ch. 21.
+
+Hausman, J. (1981). "Exact Consumers Surplus and Deadweight Loss", American Economic Review 81, 622-676.
+
+Hausman, J. and W. Newey (1995). “Nonparametric Estimation of Exact Consumers Surplus and Deadweight Loss,” Econometrica 63, 1445-1476.
+
+($*$) **Goulder, L. and R. Williams (2003). “The Substantial Bias from Ignoring General Equilibrium Effects in Estimating Excess Burden, and a Practical Solution,” Journal of Political Economy 111, 898-927.**
+
+Albouy, D. (2009). "The Unequal Geographic Burden of Federal Taxation," Journal of Political Economy, vol. 117(4), pages 635-667, 08.
+
+Bento, A., Goulder, L., Jacobsen, M. and R. von Haefen (2009). "Distributional and Efficiency Impacts of Increased US Gasoline Taxes," American Economic Review, vol. 99(3), pages 667-99.
+
+($*$) **Chetty, R. (2008). "Moral hazard versus liquidity and optimal unemployment insurance," Journal of Political Economy, 116(2), 173-234.**
+
+Chetty, R. (2009). “Sufficient Statistics for Welfare Analysis: A Bridge Between Structural and Reduced-Form Methods,” Annual Review of Economics 1: 451-488.
+
+Gorodnichenko, Y., Martinez-Vazquez, J. and K. Sabirianova Peter (2009). "Myth and reality of flat tax reform: Micro estimates of tax evasion response and welfare effects in Russia," Journal of Political economy, 117(3), 504-554.
+
+Heckman, J. (2010). "Building Bridges between Structural and Program Evaluation Approaches to Evaluating Policy," Journal of Economic Literature, vol. 48(2), pages 356-98.
+
+Alesina, A., Ichino, A. and L. Karabarbounis (2011). “Gender Based Taxation and the Division of Family Chores,” American Economic Journal: Economic Policy, 1-40.
+
+Einav, L., Knoepfle, D., Levin, J. and N. Sundaresan (2014). “Sales Taxes and Internet Commerce,” American Economic Review, 1-26.
+
+($*$) **Kleven, H. J. (2021). Sufficient statistics revisited. Annual Review of Economics, 13:515-38.**
+
+### Topic 2. Tax incidence
+
+[[Slides]](https://www.pedroforquesato.com/eae6060/eae6060-week-3-incidence.html)
+
+($*$) **Salanié, ch. 1.**
+
+Kotlikoff, L. and L. Summers (1987). “Tax Incidence,” Handbook of Pub. Econ., vol. 2, pp. 1043-1092.
+
+Fullerton, D. and G. Metcalf (2002). “Tax Incidence,” Handbook of Pub. Econ., vol. 4, ch. 23.
+
+Poterba, J. (1984). "Tax Subsidies to Owner-Occupied Housing: An Asset Market
+Approach," Quarterly Journal of Economics 99, 729-752.
+
+Gruber, J. (1994). “The Incidence of Mandated Maternity Benefits,” American Economic Review, 84(3), 622-641.
+
+Gruber, J. (1997). “The Incidence of Payroll Taxation: Evidence from Chile,” Journal of Labor Economics 15, S73-S91.
+
+Gruber, J. and B. Koszegi (2004). “Tax Incidence When Individuals Are Time-Inconsistent:
+The Case Of Cigarette Excise Taxes,” Journal of Public Economics 88, 1959-1987.
+
+Politi, R. B. and E. Mattos (2011). "Ad‐valorem tax incidence and after‐tax price adjustments: evidence from Brazilian basic basket food," Canadian Journal of Economics 44(4): 1438-1470.
+
+($*$) **Harding, M., Leibtag, E. and M. Lovenheim (2012). "The Heterogeneous Geographic and Socioeconomic Incidence of Cigarette Taxes: Evidence from Neilsen Homescan Data," American Economic Journal: Economic Policy 4, pp. 169-198.**
+
+Weyl, E. and M. Fabinger (2013). "Pass-through as an economic tool: Principles of incidence under imperfect competition," Journal of Political Economy, 121(3), 528-583.
+
+Serrato, J. and O. Zidar (2016). "Who Benefits from State Corporate Tax Cuts? A Local Labor Markets Approach with Heterogeneous Firms," American Economic Review 106, 2582-2624.
+
+See also: Malgouyres, C., Mayer, T., & Mazet-Sonilhac, C. (2022). "Who Benefits from State Corporate Tax Cuts? A Local Labor Markets Approach with Heterogeneous Firms: Comment," American Economic Review, forthcoming.
+
+Harju, J., Kosonen, T., and O. Skans (2018). “Firm Types, Price-Setting Strategies, and Consumption Tax Incidence?,” Journal of Public Economics 165, 48-72.
+
+($*$) **Benzarti, Y. and D. Carloni (2019). “Who Really Benefits from Consumption Tax Cuts? Evidence from a Large VAT Reform in France,” American Economic Journal: Economic Policy.**
+
+Sachs, D., Tsyvinski, A. and N. Werquin (2020). "Nonlinear tax incidence and optimal taxation in general equilibrium," Econometrica, 88(2), 469-493.
+
+Benzarti, Y., Carloni, D., Harju, J. and T. Kosonen (2020). "What Goes Up May Not Come Down: Asymmetric Incidence of Value-Added Taxes," Journal of Political Economy, 128:12, pp. 4438-4474.
+
+($*$) **Ganapati, S., Shapiro, J. and R. Walker. (2020). "Energy cost pass-through in US manufacturing: Estimates and implications for carbon taxes," American Economic Journal: Applied Economics, 12(2), 303-42.**
+
+### Topic 3. Labor income taxation
+
+[[Slides]](https://www.pedroforquesato.com/eae6060/eae6060-week-4-labor-income.html)
+
+Salanié, ch. 4.
+
+Mirrlees review, chs. 2 and 3.
+
+Stiglitz, J. (1987). “Pareto Efficient and Optimal Taxation and the New New Welfare Economics,” Handbook of Pub. Econ., vol. 2, 991-1041.
+
+($*$) **Piketty, T. and E. Saez (2013). “Optimal Labor Income Taxation,” Handbook of Pub. Econ., vol. 5.**
+
+Akerlof, G. (1978). “The Economics of Tagging as Applied to the Optimal Income Tax”, American Economic Review, 68(1), 8-19.
+
+R. Burgess and N. Stern (1993). “Taxation and Development,” Journal of Economic Literature, 31(2), 762-830.
+
+Feldstein, M. (1999). “Tax Avoidance and the Deadweight Loss of the Income Tax,” Review of Economics and Statistics, 81(4), 674-680.
+
+Saez, E. (2001). “Using Elasticities to Derive Optimal Income Tax Rates,” Review of Economics Studies, 68, 205-229.
+
+Gruber, J. and E. Saez (2002). "The elasticity of taxable income: evidence and implications," Journal of Public Economics, 84(1), 1-32.
+
+Eissa, N., Kleven, H. and C. Kreiner (2008). “Evaluation of Four Tax Reforms in the United States: Labor Supply and Welfare Effects for Single Mothers,” Journal of Public Economics 92, 795-816.
+
+Beaudry, P., Blackorby, C. and D. Szalay (2009). “Taxes and Employment Subsidies in Optimal Redistribution Programs,” American Economic Review 99, 216-242.
+
+($*$) **Chetty, R. (2009). "Is the Taxable Income Elasticity Sufficient to Calculate Deadweight Loss? The Implications of Evasion and Avoidance," American Economic Journal: Economic Policy: 1(2): 31–52.**
+
+Kleven, H., Kreiner, C. and E. Saez (2009). “The Optimal Income Taxation of Couples,” Econometrica, 77, pp. 537–560.
+
+Saez, E. (2010). "Do Tax Filers Bunch at Kink Points?,” American Economic Journal: Economic Policy 2, 180-212.
+
+($*$) **Chetty, R., Friedman, J. N., Olsen, T., and L. Pistaferri (2011). "Adjustment costs, firm responses, and micro vs. macro labor supply elasticities: Evidence from Danish tax records," The Quarterly Journal of Economics, 126(2), 749-804.**
+
+Keane, M. (2011). “Labor Supply and Taxes: A Survey,” Journal of Economic Literature, 49 , 961-1075.
+
+Chetty, R. (2012). "Bounds on Elasticities with Optimization Frictions: A Synthesis of Micro and Macro Evidence on Labor Supply," Econometrica 80, 969-1018.
+
+Saez, E., Slemrod, J. and S. Giertz (2012). "The Elasticity of Taxable Income with Respect to Marginal Tax Rates: A Critical Review," Journal of Economic Literature 50, 3-50.
+
+($*$) **Kleven, H. and M. Waseem (2013). "Using notches to uncover optimization frictions and structural elasticities: Theory and evidence from Pakistan," The Quarterly Journal of Economics, 128(2), 669-723.**
+
+Rothschild, C. and F. Scheuer (2013). "Redistributive taxation in the Roy model," The Quarterly Journal of Economics, 128(2), 623-668.
+
+Bastani, S. and H. Selin (2014). "Bunching and Non-Bunching at Kink Points of the Swedish Tax Schedule," Journal of Public Economics 109, 36-49.
+
+Kleven, H., Landais, C., Saez, E. and E. Schultz (2014). "Migration and Wage Effects of Taxing Top Earners: Evidence from the Foreigners' Tax Scheme in Denmark," Quarterly Journal of Economics 129, 333-378.
+
+($*$) **Piketty, T., Saez, E., and S. Stantcheva (2014). "Optimal Taxation of Top Labor Incomes: A Tale of Three Elasticities," American Economic Journal: Economic Policy, 6(1), 230-71.**
+
+Stantcheva, S. (2014). "Optimal income taxation with adverse selection in the labour market," Review of Economic Studies, 81(3), 1296-1329.
+
+Gelber, A. (2014). “Taxation and Earnings of Husbands and Wives: Evidence from Sweden," Review of Economics and Statistics 96, 287-305.
+
+Romer, C. and D. Romer (2014). "The Incentive Effects of Marginal Tax Rates: Evidence from the Interwar Era," American Economic Journal: Economic Policy, 6, Number 3, 242-281.
+
+($*$) **Akcigit, U., Baslandze, S., and S. Stantcheva (2016). "Taxation and the international mobility of inventors," American Economic Review, 106(10), 2930-81.**
+
+Ales, L. and C. Sleet (2016). "Taxing top CEO incomes," American Economic Review, 106(11), 3331-66.
+
+Kleven, H. (2016). “Bunching,” Annual Review of Economics 8, 435-464.
+
+Rothschild, C. and F. Scheuer (2016). "Optimal taxation with rent-seeking," The Review of Economic Studies, 83(3), 1225-1262.
+
+Saez, E. and S. Stantcheva (2016). "Generalized social marginal welfare weights for optimal tax theory," American Economic Review, 106(1), 24-45.
+
+Scheuer, F. and I. Werning (2017). "The taxation of superstars," The Quarterly Journal of Economics, 132(1), 211-270.
+
+Mertens, K. and J. Olea (2018). "Marginal Tax Rates and Income: New Time Series Evidence," Quarterly Journal of Economics 133,1803-1884.
+
+Agrawal, D. and D. Foremny (2019). "Relocation of the rich: Migration in response to top tax rate changes from Spanish reforms," Review of Economics and Statistics, 101(2), 214-232.
+
+Bell, A., Chetty, R., Jaravel, X., Petkova, N. and J. Van Reenen (2019). "Do tax cuts produce more Einsteins? The impacts of financial incentives versus exposure to innovation on the supply of inventors," Journal of the European Economic Association.
+
+Tortarolo, D., Guillermo, C. and V. Castillo (2019). “It  takes two to tango:  labor responses to an income tax holiday in Argentina,” UC Berkeley  working paper.
+
+Farhi, E. and X. Gabaix (2020). "Optimal taxation with behavioral agents," American Economic Review, 110(1), 298-336.
+
+Gelber, A. M., Jones, D., & Sacks, D. W. (2020). "Estimating adjustment frictions using nonlinear budget sets: Method and evidence from the earnings test," American Economic Journal: Applied Economics, 12(1), 1-31.
+
+Kleven, H., Landais, C., Muñoz, M. and S. Stantcheva (2020). "Taxation and migration: evidence and policy implications," Journal of Economic Perspectives, 34 (2). pp. 119-142. 
+
+Mortenson, J. and A. Whitten (2020). "Bunching to Maximize Tax Credits: Evidence from Kinks in the US Tax Schedule," American Economic Journal: Economic Policy, 12 (3): 402-32.
+
+Rauh, J. and R. Shyu (2020). "Behavioral responses to state income taxation of high earners: evidence from California," National Bureau of Economic Research No. w26349.
+
+Stantcheva, S. (2020). "Dynamic taxation," Annual Review of Economics, 12, 801-831.
+
+Blomquist, S., Newey, W. K., Kumar, A., & Liang, C. Y. (2021). On bunching and identification of the taxable income elasticity. Journal of Political Economy, 129(8).
+
+Akcigit, U., Grigsby, J., Nicholas, T., & Stantcheva, S. (2022). "Taxation and Innovation in the Twentieth Century," The Quarterly Journal of Economics, 137(1), 329-385.
+
+Tazhitdinova, A. (2022). "Increasing Hours Worked: Moonlighting Responses to a Large Tax Reform," AEJ: Economic Policy 14(1): 473-500.
+
+### Topic 4. Consumption taxation 
+
+[[Slides]](https://www.pedroforquesato.com/eae6060/eae6060-week-5-consumption-taxation.html)
+
+($*$) **Salanié, chs. 3 and 5.**
+
+Mirrlees review, ch. 4.
+
+Gordon, R. and S. Nielsen (1997). "Tax evasion in an open economy:: Value-added vs. income taxation," Journal of Public Economics, 66(2), 173-197.
+
+Gruber, J. and B. Köszegi (2001). "Is addiction 'rational'? Theory and evidence," The Quarterly Journal of Economics, 116(4), 1261-1303.
+
+O’Donoghue, T. and M. Rabin (2006). “Optimal Sin Taxes,” Journal of Public Economics 90: 1825-1849.
+
+Carbonnier, C. (2007). "Who pays sales taxes? Evidence from French VAT reforms, 1987–1999," Journal of Public Economics, 91(5-6), 1219-1229.
+
+Boadway, R. and M. Sato (2009). "Optimal Tax Design and Enforcement with an Informal Sector." American Economic Journal: Economic Policy, 1(1): 1–27.
+
+($*$) **Chetty, R., Looney, A. and K. Kroft (2009). "Salience and Taxation: Theory and Evidence," American Economic Review 99, 1145-1177.**
+
+De Paula, A. and J. Scheinkman (2010). "Value-added taxes, chain effects, and informality," American Economic Journal: Macroeconomics, 2(4), 195-221.
+
+Keen, M. and B. Lockwood (2010). "The value added tax: Its causes and consequences," Journal of Development Economics, 92(2), 138-151.
+
+Besley, T., Meads, N. and P. Surico (2014). "The Incidence of Transactions Taxes: Evidence from a Stamp Duty Holiday," Journal of Public Economics 119, 61-70.
+
+Keen, M. and J. Slemrod (2017). “Optimal Tax Administration,” Journal of Public Economics 152, 133-142.
+
+Slemrod, J., Collins, B., Hoopes, J. L., Reck, D., & Sebastiani, M. (2017). "Does credit-card information reporting improve small-business tax compliance?," Journal of Public Economics, 149, 1-19.
+
+Best, M. and H. Kleven (2018). "Housing market responses to transaction taxes: Evidence from notches and stimulus in the UK," The Review of Economic Studies, 85(1), 157-193.
+
+($*$) **Alcott, H., Lockwood, B. and D. Taubinsky (2019). “Regressive Sin Taxes with an Application to the Optimal Soda Tax,” Quarterly Journal of Economics 134, 1557-1626.**
+
+Liu, L., Lockwood, B., Almunia, M. and E. Tam (2019). "VAT notches, voluntary registration, and bunching: Theory and UK evidence," Review of Economics and Statistics, 1-45.
+
+Gadenne, L., Nandi, T. K., & Rathelot, R. (2019). "Taxation and Supplier Networks: Evidence from India," Working Paper No. W19/21, Institute for Fiscal Studies.
+
+($*$) **Naritomi, J. (2019). “Consumers as Tax Auditors,” American Economic Review 109, 3031-3072.**
+
+Slemrod, J. (2019). "Tax compliance and enforcement," Journal of Economic Literature, 57(4), 904-54.
+
+Bachas, P. J., Gadenne, L. and A. Jensen (2020). "Informality, Consumption Taxes and Redistribution," World Bank Policy Research Working Paper n. 9267.
+
+Bradley, S. and N. Feldman (2020). "Hidden Baggage: Behavioral Responses to Changes in Airline Ticket Tax Disclosure," American Economic Journal: Economic Policy, 12 (4): 58-87. 
+
+Kroft, K., Laliberté, J., Vizcaíno, R. and M. Notowidigdo (2020). "Salience and Taxation with Imperfect Competition," National Bureau of Economic Research No. w27409.
+
+
+## Bibliography
+
+Textbooks mentioned above (and strongly recommended reading in general) are:
+
+1. Mirrlees, J. and S. Adam (2010). "Dimensions of tax design: the Mirrlees review," Oxford University Press.
+2. Salanie, B. (2011). "The Economics of Taxation," MIT press.
+3. Atkinson, A. and J. Stiglitz (2015). "Lectures on Public Economics: Updated Edition," Princeton University Press.
+4. Handbooks of Public Economics (many authors and years), volumes 1 to 5.
+
+## Course requirements
+
+To successfully complete this sequence, students will have to submit **two referee reports** and **present one paper** from the reading list of that course (or by instructor's discretion). 
+
+At the end of this course, the student is also required to **replicate a research article** from the bibliography.
+
+## Office Hours
+
+Office hours can be scheduled with the link available on [Moodle](https://edisciplinas.usp.br).
+
+\
